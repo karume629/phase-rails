@@ -50,7 +50,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :handle_blank_field
     private
 
     def comment_params
-        params.permit(:name, :description, :image, :likes, :user_id)
+        params.permit(:comment, :pet_id, :user_id)
     end
 
     def handle_blank_field(invalid)
